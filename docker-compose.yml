@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  userapplication.webapi:
+    image: ${DOCKER_REGISTRY-}userapplicationwebapi
+    ports: 
+      - 54411:80
+    build:
+      context: .
+      dockerfile: UserApplication.WebApi\Dockerfile
